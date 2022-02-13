@@ -1,0 +1,38 @@
+<div class='card'>
+    <div class='card-header'>
+     {{pageTitle}}
+     <div class="form-group table ">
+      <input   type="text" class="search form-control" placeholder="Type to search">
+    </div>
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'
+              *ngIf = 'students && students.length'>
+          <thead>
+            <tr>
+             
+              <th>name</th>
+              <th>email</th>
+             
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let student of students'>
+                
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.email }}</td>
+                 
+                  <td>
+                    <button class="btn btn-warning" style="cursor:pointer"  (click)="present(student)" style="margin-left: 20px;"> Present</button>
+                    <button class="btn btn-danger" style="cursor:pointer"(click)="abscent(student,this.student)"> Abscent</button>
+                  </td> 
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

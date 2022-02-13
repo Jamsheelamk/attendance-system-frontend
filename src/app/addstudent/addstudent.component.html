@@ -1,0 +1,31 @@
+<div class='card'>
+    <form (ngSubmit)="Addstudent()">
+<div class='card-header'>
+ ADD student
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>email</label></td>
+              <td><input type="email" name="p_id" [(ngModel)]="studentItem.email"/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="p_name" [(ngModel)]="studentItem.name"/></td>                  
+              </tr>  
+              
+                
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
+
